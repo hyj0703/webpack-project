@@ -8,10 +8,8 @@ import './Demo.scss'
 import DemoAnimationNum from './DemoAnimationNum'
 import DemoAutoFontSize from './DemoAutoFontSize'
 import DemoBarrages from './DemoBarrages'
-import DemoCall from './DemoCall'
 import DemoComposeImgs from './DemoComposeImgs'
 import DemoDate from './DemoDate'
-import DemoEnvs from './DemoEnvs'
 import DemoErrorBoundary from './DemoErrorBoundary'
 import DemoFlipper from './DemoFlipper'
 import DemoImg from './DemoImg'
@@ -66,9 +64,7 @@ export default connect(
               DemoLoadImgs,
               DemoComposeImgs,
               DemoAnimationNum,
-              DemoEnvs,
               DemoTo,
-              DemoCall,
               DemoAutoFontSize,
               DemoPopupItems,
             }).map(([name, DemoComponent]) => {

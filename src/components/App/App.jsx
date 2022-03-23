@@ -5,11 +5,10 @@ import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper'
 import 'swiper/components/pagination/pagination.min.css'
 import 'swiper/swiper.min.css'
 import store from '../../store'
-import BranchLineTransfer from '../BranchLineTransfer/BranchLineTransfer'
 import CommonErrHandler from '../CommonErrHandler/CommonErrHandler'
 import Demo from '../Demo/Demo' //TODO 演示用，可删除
 import KeySharePanel from '../KeySharePanel/KeySharePanel'
-import TransparentOverlay from '../TransparentOverlay/TransparentOverlay'
+import Initing from '../Initing/Initing'
 import './App.scss'
 import historyOpts from './historyOpts'
 
@@ -25,19 +24,17 @@ export default function App() {
         historyOpts={historyOpts}
         ref={routerRef}>
         <Switch>
+          <Initing />
           {/* TODO 演示用，可删除 */}
           <Demo />
 
           {/* 其他的路由可以放在这里 */}
 
-          <BranchLineTransfer />
           {/* 其他的路由可以放在这里 */}
         </Switch>
       </Router>
 
       <KeySharePanel />
-
-      <TransparentOverlay />
     </Provider>
   )
 }
