@@ -1,0 +1,16 @@
+.pull_downer {
+  &_content_container {
+    overflow: hidden;
+    &.pull_downer {
+      &--initing {
+        left: -9999px;
+        position: absolute;
+        top: -9999px;
+      }
+    }
+  }
+  &_children_container {
+    overflow: hidden;
+    position: relative;
+  }
+}

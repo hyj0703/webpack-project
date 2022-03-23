@@ -1,0 +1,18 @@
+.demo-mock {
+  &__user {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 3px 0;
+  }
+  &__avatar {
+    display: block;
+    height: 75px;
+    width: 75px;
+  }
+  &__nickname {
+    display: block;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,246 @@
+.popup-bg {
+  position: relative;
+  &:before {
+    content: '';
+    left: -60px;
+    position: absolute;
+    top: -290px;
+  }
+  .flex-bg {
+    &__t {
+      position: relative;
+    }
+    &__b {
+      position: relative;
+    }
+    &__m {
+      position: relative;
+      z-index: 1;
+      &-c {
+        position: relative;
+        width: 446px;
+      }
+    }
+  }
+  &__left-decoration {
+    left: -135px;
+    margin-top: -60px;
+    position: absolute;
+    top: 30%;
+  }
+  &__right-decoration {
+    margin-top: -60px;
+    position: absolute;
+    right: -102px;
+    top: 30%;
+  }
+  &__content {
+    margin: -28px -50px -100px;
+    text-align: center;
+  }
+}
+
+.popup-content-bg {
+  .flex-bg {
+    &__m-c {
+      width: 440px;
+    }
+  }
+}
+
+.popup-light-content-bg {
+  .flex-bg {
+    &__m-c {
+      width: 440px;
+    }
+  }
+}
+
+.popup-btn-close {
+  position: absolute;
+  right: -125px;
+  top: -115px;
+  &:before {
+    bottom: -20px;
+    content: '';
+    left: -20px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+  }
+}
+
+.popup-coupon {
+  margin: 0 auto;
+}
+
+.popup-btn {
+  margin: 0 auto;
+  position: relative;
+  &__txt {
+    color: #ffefaa;
+    font-size: 44px;
+    height: 100%;
+    left: 66px;
+    -webkit-text-stroke: 8px #b02303;
+    position: absolute;
+    right: 66px;
+    top: -10%;
+    .stroke-text__text {
+      text-shadow: 0 -1px 0 #fff8da, 0 1px 0 #dfd195;
+    }
+  }
+  &--red {
+  }
+  &--disabled {
+    .popup-btn {
+      &__txt {
+        color: #dddcd6;
+        -webkit-text-stroke: 8px #7e7270;
+        .stroke-text__text {
+          text-shadow: 0 -1px 0 #f0efed, 0 1px 0 #b7b4b0;
+        }
+      }
+    }
+  }
+}
+
+.popup-short-btn {
+  position: relative;
+  &__txt {
+    color: #ffefaa;
+    font-size: 44px;
+    height: 100%;
+    left: 40px;
+    -webkit-text-stroke: 8px #b02303;
+    position: absolute;
+    right: 40px;
+    top: -10%;
+    .stroke-text__text {
+      text-shadow: 0 -1px 0 #fff8da, 0 1px 0 #dfd195;
+    }
+  }
+  &--red {
+  }
+  &--disabled {
+    .popup-short-btn {
+      &__txt {
+        color: #dddcd6;
+        -webkit-text-stroke: 8px #7e7270;
+        .stroke-text__text {
+          text-shadow: 0 -1px 0 #f0efed, 0 1px 0 #b7b4b0;
+        }
+      }
+    }
+  }
+}
+
+.popup-title {
+  box-sizing: border-box;
+  left: -10px;
+  pointer-events: none;
+  position: absolute;
+  top: -255px;
+  &--logo {
+    left: -120px;
+    padding: 185px 48px 20px 144px;
+    top: -306px;
+  }
+  &__logo {
+    height: 60px;
+    left: 284px;
+    position: absolute;
+    top: 114px;
+    width: 120px;
+    .jmdd-react-img__img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  &--cry {
+    &.popup-title {
+      &--logo {
+      }
+    }
+  }
+}
+
+.popup-short-title {
+  box-sizing: border-box;
+  color: #fce5aa;
+  font-size: 48px;
+  font-weight: bold;
+  left: 2px;
+  padding: 200px 29px 2px 18px;
+  pointer-events: none;
+  position: absolute;
+  text-shadow: 0 2px 1px #f7b278, 0 -2px 1px #1d2e79;
+  top: -320px;
+  z-index: 2;
+  &--logo {
+    left: -124px;
+    padding: 185px 48px 20px 144px;
+    top: -306px;
+  }
+  &__logo {
+    height: 60px;
+    left: 284px;
+    position: absolute;
+    top: 114px;
+    width: 120px;
+    .jmdd-react-img__img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  &__txt {
+    height: 100%;
+    margin: 0 30px;
+  }
+  &--cry {
+    &.popup-short-title {
+      &--logo {
+      }
+    }
+  }
+}
+
+.popup-long-title {
+  box-sizing: border-box;
+  color: #fce5aa;
+  font-size: 48px;
+  font-weight: bold;
+  left: -74px;
+  padding: 200px 42px 2px 3px;
+  pointer-events: none;
+  position: absolute;
+  text-shadow: 0 2px 1px #f7b278, 0 -2px 1px #1d2e79;
+  top: -320px;
+  z-index: 2;
+  &--logo {
+    left: -124px;
+    padding: 185px 2px 2px 52px;
+    top: -306px;
+  }
+  &__logo {
+    height: 60px;
+    left: 284px;
+    position: absolute;
+    top: 114px;
+    width: 120px;
+    .jmdd-react-img__img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  &__txt {
+    height: 100%;
+    margin: 0 30px;
+  }
+  &--cry {
+    &.popup-long-title {
+      &--logo {
+      }
+    }
+  }
+}

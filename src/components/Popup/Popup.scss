@@ -1,0 +1,550 @@
+.popup {
+  $overlayShowDuration: 0.3s;
+  $overlayShowDelay: 0s;
+  $contentShowDuration: 0.5s;
+  $contentShowDelay: 0.1s;
+
+  $overlayHideDuration: 0.2s;
+  $overlayHideDelay: 0.3s;
+  $contentHideDuration: 0.5s;
+  $contentHideDelay: 0s;
+
+  $contentOffset0: 400px;
+  $contentOffset1: 100px;
+  $contentBouns0: 12px;
+  $contentBouns1: 9px;
+  $contentBouns2: 6px;
+  $contentBouns3: 3px;
+
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  &__overlay {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  & > *:last-child {
+    flex: none;
+    position: relative;
+  }
+  &.popup {
+    &--position {
+      &-top {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      &-bottom {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      &-left {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+      &-right {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+      &-center {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      &-middle {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      // 膨胀任务动画
+      &-expand {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 150px;
+        box-sizing: border-box;
+      }
+      // 渐隐渐显
+      &-fade {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      //天降红包
+      &-drop {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &--enter,
+    &--enter-active,
+    &--appear,
+    &--appear-active {
+      .popup {
+        &__overlay {
+          @keyframes popupOverlayShow {
+            0% {
+              opacity: 0;
+            }
+          }
+          animation: popupOverlayShow $overlayShowDuration $overlayShowDelay
+            backwards;
+          pointer-events: none;
+        }
+      }
+      & > *:last-child {
+        pointer-events: none;
+      }
+      &.popup {
+        &--position {
+          &-top {
+            & > *:last-child {
+              @keyframes popupContentShowTop {
+                0% {
+                  opacity: 0;
+                  transform: translate3d(0, -$contentOffset0, 0);
+                }
+                40% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns0, 0);
+                }
+                55% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns1, 0);
+                }
+                70% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns2, 0);
+                }
+                85% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns3, 0);
+                }
+              }
+              animation: popupContentShowTop $contentShowDuration
+                $contentShowDelay backwards;
+            }
+          }
+          &-bottom {
+            & > *:last-child {
+              @keyframes popupContentShowBottom {
+                0% {
+                  opacity: 0;
+                  transform: translate3d(0, $contentOffset0, 0);
+                }
+                40% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns0, 0);
+                }
+                55% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns1, 0);
+                }
+                70% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns2, 0);
+                }
+                85% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns3, 0);
+                }
+              }
+              animation: popupContentShowBottom $contentShowDuration
+                $contentShowDelay backwards;
+            }
+          }
+          &-left {
+            & > *:last-child {
+              @keyframes popupContentShowLeft {
+                0% {
+                  opacity: 0;
+                  transform: translate3d(-$contentOffset0, 0, 0);
+                }
+                40% {
+                  opacity: 1;
+                  transform: translate3d($contentBouns0, 0, 0);
+                }
+                55% {
+                  opacity: 1;
+                  transform: translate3d(-$contentBouns1, 0, 0);
+                }
+                70% {
+                  opacity: 1;
+                  transform: translate3d($contentBouns2, 0, 0);
+                }
+                85% {
+                  opacity: 1;
+                  transform: translate3d(-$contentBouns3, 0, 0);
+                }
+              }
+              animation: popupContentShowLeft $contentShowDuration
+                $contentShowDelay backwards;
+            }
+          }
+          &-right {
+            & > *:last-child {
+              @keyframes popupContentShowRight {
+                0% {
+                  opacity: 0;
+                  transform: translate3d($contentOffset0, 0, 0);
+                }
+                40% {
+                  opacity: 1;
+                  transform: translate3d(-$contentBouns0, 0, 0);
+                }
+                55% {
+                  opacity: 1;
+                  transform: translate3d($contentBouns1, 0, 0);
+                }
+                70% {
+                  opacity: 1;
+                  transform: translate3d(-$contentBouns2, 0, 0);
+                }
+                85% {
+                  opacity: 1;
+                  transform: translate3d($contentBouns3, 0, 0);
+                }
+              }
+              animation: popupContentShowRight $contentShowDuration
+                $contentShowDelay backwards;
+            }
+          }
+          &-center {
+            & > *:last-child {
+              @keyframes popupContentShowCenter {
+                0% {
+                  opacity: 0;
+                  transform: translate3d(0, -$contentOffset0, 0);
+                }
+                40% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns0, 0);
+                }
+                55% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns1, 0);
+                }
+                70% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns2, 0);
+                }
+                85% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns3, 0);
+                }
+              }
+              animation: popupContentShowCenter $contentShowDuration
+                $contentShowDelay backwards;
+            }
+          }
+          &-middle {
+            & > *:last-child {
+              @keyframes popupContentShowMiddle {
+                0% {
+                  opacity: 0;
+                  transform: translate3d(0, -$contentOffset0, 0);
+                }
+                40% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns0, 0);
+                }
+                55% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns1, 0);
+                }
+                70% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns2, 0);
+                }
+                85% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns3, 0);
+                }
+              }
+              animation: popupContentShowMiddle $contentShowDuration
+                $contentShowDelay backwards;
+            }
+          }
+          // 膨胀任务显示动画
+          &-expand {
+            & > *:last-child {
+              @keyframes popupContentShowExpand {
+                0% {
+                  opacity: 0;
+                  transform: translate3d(0, -$contentOffset0, 0);
+                }
+                40% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns0, 0);
+                }
+                55% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns1, 0);
+                }
+                70% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns2, 0);
+                }
+                85% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns3, 0);
+                }
+              }
+              animation: popupContentShowExpand $contentShowDuration
+                $contentShowDelay backwards;
+            }
+          }
+          // 渐隐渐显显示动画
+          &-fade {
+            & > *:last-child {
+              @keyframes popupContentShowFade {
+                0% {
+                  opacity: 0;
+                }
+                85% {
+                  opacity: 1;
+                }
+              }
+              animation: popupContentShowFade $contentShowDuration
+                $contentShowDelay backwards;
+            }
+          }
+          //天降红包
+          &-drop {
+            & > *:last-child {
+              @keyframes popupContentShowDrop {
+                0% {
+                  opacity: 0;
+                  transform: translate3d(0, -$contentOffset0, 0);
+                }
+                40% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns0, 0);
+                }
+                55% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns1, 0);
+                }
+                70% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentBouns2, 0);
+                }
+                85% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentBouns3, 0);
+                }
+              }
+              animation: popupContentShowDrop $contentShowDuration
+                $contentShowDelay backwards;
+            }
+          }
+        }
+      }
+    }
+    &--exit,
+    &--exit-active {
+      .popup {
+        &__overlay {
+          @keyframes popupOverlayHide {
+            0% {
+              opacity: 1;
+            }
+          }
+          animation: popupOverlayHide $overlayHideDuration $overlayHideDelay
+            backwards;
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+      & > *:last-child {
+        pointer-events: none;
+      }
+      &.popup {
+        &--position {
+          &-top {
+            & > *:last-child {
+              @keyframes popupContentHideTop {
+                0% {
+                  opacity: 1;
+                  transform: translate3d(0, 0, 0);
+                }
+                60% {
+                  opacity: 1;
+                  transform: translate3d(0, $contentOffset1, 0);
+                }
+              }
+              animation: popupContentHideTop $contentHideDuration
+                $contentHideDelay backwards;
+              opacity: 0;
+              transform: translate3d(0, -$contentOffset0, 0);
+            }
+          }
+          &-bottom {
+            & > *:last-child {
+              @keyframes popupContentHideBottom {
+                0% {
+                  opacity: 1;
+                  transform: translate3d(0, 0, 0);
+                }
+                60% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentOffset1, 0);
+                }
+              }
+              animation: popupContentHideBottom $contentHideDuration
+                $contentHideDelay backwards;
+              opacity: 0;
+              transform: translate3d(0, $contentOffset0, 0);
+            }
+          }
+          &-left {
+            & > *:last-child {
+              @keyframes popupContentHideLeft {
+                0% {
+                  opacity: 1;
+                  transform: translate3d(0, 0, 0);
+                }
+                60% {
+                  opacity: 1;
+                  transform: translate3d($contentOffset1, 0, 0);
+                }
+              }
+              animation: popupContentHideLeft $contentHideDuration
+                $contentHideDelay backwards;
+              opacity: 0;
+              transform: translate3d(-$contentOffset0, 0, 0);
+            }
+          }
+          &-right {
+            & > *:last-child {
+              @keyframes popupContentHideRight {
+                0% {
+                  opacity: 1;
+                  transform: translate3d(0, 0, 0);
+                }
+                60% {
+                  opacity: 1;
+                  transform: translate3d(-$contentOffset1, 0, 0);
+                }
+              }
+              animation: popupContentHideRight $contentHideDuration
+                $contentHideDelay backwards;
+              opacity: 0;
+              transform: translate3d($contentOffset0, 0, 0);
+            }
+          }
+          &-center {
+            & > *:last-child {
+              @keyframes popupContentHideCenter {
+                0% {
+                  opacity: 1;
+                  transform: translate3d(0, 0, 0);
+                }
+                60% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentOffset1, 0);
+                }
+              }
+              animation: popupContentHideCenter $contentHideDuration
+                $contentHideDelay backwards;
+              opacity: 0;
+              transform: translate3d(0, $contentOffset0, 0);
+            }
+          }
+          &-middle {
+            & > *:last-child {
+              @keyframes popupContentHideMiddle {
+                0% {
+                  opacity: 1;
+                  transform: translate3d(0, 0, 0);
+                }
+                60% {
+                  opacity: 1;
+                  transform: translate3d(0, -$contentOffset1, 0);
+                }
+              }
+              animation: popupContentHideMiddle $contentHideDuration
+                $contentHideDelay backwards;
+              opacity: 0;
+              transform: translate3d(0, $contentOffset0, 0);
+            }
+          }
+          // 膨胀任务缩放动画
+          &-expand {
+            & > *:last-child {
+              @keyframes popupContentHideExpand {
+                0% {
+                  opacity: 1;
+                  transform: translate3d(0, 0, 0) scale(1);
+                }
+                100% {
+                  opacity: 1;
+                  transform: translate3d(310px, -300px, 0) scale(0.1);
+                }
+              }
+              animation: popupContentHideExpand $contentHideDuration
+                $contentHideDelay backwards;
+              opacity: 0;
+              transform: translate3d(0, -$contentOffset0, 0);
+            }
+          }
+          // 渐隐渐显隐藏动画
+          &-fade {
+            & > *:last-child {
+              @keyframes popupContentHideFade {
+                0% {
+                  opacity: 1;
+                }
+                100% {
+                  opacity: 0;
+                }
+              }
+              animation: popupContentHideFade $contentHideDuration backwards;
+            }
+          }
+          //天降红包
+          &-drop {
+            & > *:last-child {
+              @keyframes popupContentHideDrop {
+                0% {
+                  opacity: 1;
+                  transform: translate3d(0, 0, 0) translate3d(0, 0, 0)
+                    scale3d(1, 1, 1);
+                }
+                100% {
+                  opacity: 1;
+                  transform: translate3d(0, -50vh, 0)
+                    translate3d(300px, 640px, 0) scale3d(0.1, 0.1, 1);
+                }
+              }
+              animation: popupContentHideDrop $contentHideDuration
+                $contentHideDelay backwards;
+              opacity: 0;
+              transform: translate3d(0, 0, 0) translate3d(0, -50vh, 0)
+                translate3d(300px, 640px, 0) scale3d(0.1, 0.1, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

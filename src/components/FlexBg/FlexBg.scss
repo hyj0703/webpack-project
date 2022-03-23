@@ -1,0 +1,40 @@
+.flex-bg {
+  align-items: stretch;
+  display: inline-block;
+  &__t {
+    align-items: stretch;
+    &-l {
+      flex: none;
+    }
+    &-c {
+      flex: auto;
+    }
+    &-r {
+      flex: none;
+    }
+  }
+  &__m {
+    align-items: stretch;
+    &-l {
+      flex: none;
+    }
+    &-c {
+      flex: auto;
+    }
+    &-r {
+      flex: none;
+    }
+  }
+  &__b {
+    align-items: stretch;
+    &-l {
+      flex: none;
+    }
+    &-c {
+      flex: auto;
+    }
+    &-r {
+      flex: none;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.branch-line-transfer {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  &__banner-img {
+    background-size: 100% 100%;
+    width: 750px;
+    height: 374px;
+    bottom: 159px;
+    position: absolute;
+  }
+}
+.branch-line {
+  &--enter,
+  &--enter-active,
+  &--appear,
+  &--appear-active {
+    opacity: 1;
+  }
+  &--exit,
+  &--exit-active {
+    @keyframes zoomOut {
+      0% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    animation: zoomOut 0.5s backwards;
+    opacity: 0;
+    transform: translate3d(428px, -280px, 0) scale3d(0.05, 0.05, 1);
+    animation-delay: 0.5s;
+    transform-origin: -260px 650px;
+  }
+}

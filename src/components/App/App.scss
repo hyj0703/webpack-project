@@ -1,0 +1,60 @@
+html {
+  font-family: JDZH-Regular, -apple-system, sans-serif;
+}
+
+.jmdd-toast {
+  // @keyframes jmddToastBgShow {
+  //   0% {
+  //     background: rgba(0, 0, 0, 0);
+  //   }
+  // }
+  // animation: jmddToastBgShow 0.4s backwards;
+  // background: rgba(0, 0, 0, 0.8);
+  // &.jmdd-toast {
+  //   &--hide {
+  //     @keyframes jmddToastBgHide {
+  //       0% {
+  //         background: rgba(0, 0, 0, 0.8);
+  //       }
+  //     }
+  //     animation: jmddToastBgHide 0.2s 0.3s backwards;
+  //     background: rgba(0, 0, 0, 0);
+  //   }
+  // }
+  &__content {
+    background: rgba(195, 47, 46, 0.95);
+    box-shadow: none;
+    color: #ffefaa;
+  }
+  // &__icon {
+  //   path[fill='#6ac259'] {
+  //     fill: #ffefaa;
+  //   }
+  //   path[fill='#f05228'] {
+  //     fill: #ffefaa;
+  //   }
+  //   path[fill='#0096ff'] {
+  //     fill: #ffefaa;
+  //   }
+  //   path[fill='#ffb400'] {
+  //     fill: #ffefaa;
+  //   }
+  //   path[fill='#fff'] {
+  //     fill: rgba(195, 47, 46, 0.95);
+  //   }
+  // }
+}
+
+.swiper-pagination {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+.swiper-pagination-bullet {
+  border-radius: 50%;
+  display: inline-block;
+  transform: scale3d(1.01, 1.01, 1);
+}

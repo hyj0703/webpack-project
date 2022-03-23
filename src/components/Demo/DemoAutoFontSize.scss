@@ -1,0 +1,9 @@
+.demo-auto-font-size {
+  background: rgba(255, 0, 0, 0.5);
+  font-size: 64px; /*-这里设置的font-size表示<AutofontSize/>的最大字号-*/
+  height: 100px;
+  width: 200px;
+  &__unit {
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,20 @@
+.barrage {
+  @keyframes barrageOddShow {
+    0% {
+      left: 100%;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes barrageEvenShow {
+    0% {
+      left: 100%;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+  left: 0%;
+  position: absolute;
+  transform: translate3d(-100%, 0, 0);
+  white-space: nowrap;
+}

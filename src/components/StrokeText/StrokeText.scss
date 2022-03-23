@@ -1,0 +1,12 @@
+.stroke-text {
+  position: relative;
+  &__text {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-shadow: none;
+    -webkit-text-stroke-width: 0;
+    top: 0;
+    width: 100%;
+  }
+}

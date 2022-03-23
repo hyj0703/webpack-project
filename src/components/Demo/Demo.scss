@@ -1,0 +1,9 @@
+.demo {
+  &__item {
+    padding: 10px;
+    &-title {
+      font-size: 24px;
+      padding: 10px 0;
+    }
+  }
+}

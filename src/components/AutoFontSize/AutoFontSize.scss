@@ -1,0 +1,10 @@
+.auto-font-size {
+  &__content {
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    transform-origin: 0 0;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+}
