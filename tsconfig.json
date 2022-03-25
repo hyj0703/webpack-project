@@ -10,5 +10,5 @@
     "esModuleInterop": true,
     "moduleResolution": "Node"
   },
-  "include": ["./src/"]
+  "include": ["./src/", "./images.d.ts"]
 }
