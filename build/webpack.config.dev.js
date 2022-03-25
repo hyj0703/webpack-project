@@ -44,12 +44,18 @@ module.exports = (...args) => {
         module: {
           rules: [
             {
-              test: /\.jsx?$/,
+              test: /\.(j|t)sx?$/,
               exclude: /node_modules/,
-              loader: 'babel-loader',
+              loader: 'ts-loader',
               options: {
-                babelrcRoots: path.resolve(__dirname, '../'),
+                // babelrcRoots: path.resolve(__dirname, '../'),
               },
+            },
+            {
+              enforce: 'pre',
+              test: /\.js$/,
+              exclude: /node_modules/,
+              loader: 'source-map-loader',
             },
             {
               test: /\.s?css$/,

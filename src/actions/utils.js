@@ -3,7 +3,8 @@
  * @param {*} obj
  * @returns {Boolean} 是否是generator函数
  */
-function isGeneratorFunction({ constructor }) {
+function isGeneratorFunction(fn) {
+  const { constructor } = fn
   if (!constructor) {
     return false
   }
@@ -12,10 +13,16 @@ function isGeneratorFunction({ constructor }) {
     return true
   }
   const { prototype } = constructor
-  return (
+  if (
     typeof prototype.next === 'function' &&
     typeof prototype.throw === 'function'
-  )
+  ) {
+    return true
+  }
+  const generatorFn = fn.toString().indexOf('_generator')
+  if (generatorFn !== -1) {
+    return true
+  }
 }
 
 /**

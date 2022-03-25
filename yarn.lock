@@ -2075,6 +2075,13 @@
   "resolved" "http://registry.m.jd.com/@types/range-parser/download/@types/range-parser-1.2.4.tgz"
   "version" "1.2.4"
 
+"@types/react-dom@^17.0.14":
+  "integrity" "sha1-yPkXFWtlLd+AdxH1vsvSqwGN6p8="
+  "resolved" "http://registry.m.jd.com/@types/react-dom/download/@types/react-dom-17.0.14.tgz"
+  "version" "17.0.14"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-lazyload@^2.5.0":
   "integrity" "sha1-Qc2cuywD3YEDd1GNSDd5RGmlIdE="
   "resolved" "http://registry.m.jd.com/@types/react-lazyload/download/@types/react-lazyload-2.6.0.tgz"
@@ -2092,10 +2099,10 @@
     "hoist-non-react-statics" "^3.3.0"
     "redux" "^4.0.0"
 
-"@types/react@*":
-  "integrity" "sha1-bheVkNJ2OU3h41ez+J0F19Pai4U="
-  "resolved" "http://registry.m.jd.com/@types/react/download/@types/react-17.0.41.tgz"
-  "version" "17.0.41"
+"@types/react@*", "@types/react@^17.0.42":
+  "integrity" "sha1-gkK5IZv4qRHEfySOMnIG/qP07lo="
+  "resolved" "http://registry.m.jd.com/@types/react/download/@types/react-17.0.42.tgz"
+  "version" "17.0.42"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -2301,6 +2308,11 @@
   "integrity" "sha1-0pHGpOl5ibXGHZrPOWrk/hM6cY0="
   "resolved" "http://registry.m.jd.com/@xtuc/long/download/@xtuc/long-4.2.2.tgz"
   "version" "4.2.2"
+
+"abab@^2.0.5":
+  "integrity" "sha1-wLZ4+zLWD8EhnHhNaoJv44Wut5o="
+  "resolved" "http://registry.m.jd.com/abab/download/abab-2.0.5.tgz"
+  "version" "2.0.5"
 
 "abbrev@1":
   "integrity" "sha1-+PLIh60Qv2f2NPAFtph/7TF5qsg="
@@ -3497,7 +3509,7 @@
     "escape-string-regexp" "^1.0.5"
     "supports-color" "^5.3.0"
 
-"chalk@^4.0.0", "chalk@^4.1.2":
+"chalk@^4.0.0", "chalk@^4.1.0", "chalk@^4.1.2":
   "integrity" "sha1-qsTit3NKdAhnrrFr8CqtVWoeegE="
   "resolved" "http://registry.m.jd.com/chalk/download/chalk-4.1.2.tgz"
   "version" "4.1.2"
@@ -4726,7 +4738,7 @@
   dependencies:
     "once" "^1.4.0"
 
-"enhanced-resolve@^5.9.2":
+"enhanced-resolve@^5.0.0", "enhanced-resolve@^5.9.2":
   "integrity" "sha1-AiTc1qQziev7LVXv7lF+VGZ3Ldk="
   "resolved" "http://registry.m.jd.com/enhanced-resolve/download/enhanced-resolve-5.9.2.tgz"
   "version" "5.9.2"
@@ -5898,6 +5910,13 @@
     "slash" "^3.0.0"
     "which-pm-runs" "^1.0.0"
 
+"iconv-lite@^0.6.3":
+  "integrity" "sha1-pS+AvzjaGVLrXGgXkHGYcaGnJQE="
+  "resolved" "http://registry.m.jd.com/iconv-lite/download/iconv-lite-0.6.3.tgz"
+  "version" "0.6.3"
+  dependencies:
+    "safer-buffer" ">= 2.1.2 < 3.0.0"
+
 "iconv-lite@0.4.24":
   "integrity" "sha1-ICK0sl+93CHS9SSXSkdKr+czkIs="
   "resolved" "http://registry.m.jd.com/iconv-lite/download/iconv-lite-0.4.24.tgz"
@@ -6973,7 +6992,7 @@
     "snapdragon" "^0.8.1"
     "to-regex" "^3.0.2"
 
-"micromatch@^4.0.2", "micromatch@^4.0.4":
+"micromatch@^4.0.0", "micromatch@^4.0.2", "micromatch@^4.0.4":
   "integrity" "sha1-iW1Rnf6dsl/OlM63pQCRm/iB6/k="
   "resolved" "http://registry.m.jd.com/micromatch/download/micromatch-4.0.4.tgz"
   "version" "4.0.4"
@@ -9165,7 +9184,7 @@
   "resolved" "http://registry.m.jd.com/safe-stable-stringify/download/safe-stable-stringify-2.3.1.tgz"
   "version" "2.3.1"
 
-"safer-buffer@^2.0.2", "safer-buffer@^2.1.0", "safer-buffer@>= 2.1.2 < 3", "safer-buffer@~2.1.0":
+"safer-buffer@^2.0.2", "safer-buffer@^2.1.0", "safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0", "safer-buffer@~2.1.0":
   "integrity" "sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo="
   "resolved" "http://registry.m.jd.com/safer-buffer/download/safer-buffer-2.1.2.tgz"
   "version" "2.1.2"
@@ -9556,10 +9575,19 @@
   "resolved" "http://registry.m.jd.com/source-list-map/download/source-list-map-2.0.1.tgz"
   "version" "2.0.1"
 
-"source-map-js@^1.0.2", "source-map-js@>=0.6.2 <2.0.0":
+"source-map-js@^1.0.1", "source-map-js@^1.0.2", "source-map-js@>=0.6.2 <2.0.0":
   "integrity" "sha1-rbw2HZxi3zgBJefxYfccgm8eSQw="
   "resolved" "http://registry.m.jd.com/source-map-js/download/source-map-js-1.0.2.tgz"
   "version" "1.0.2"
+
+"source-map-loader@^3.0.1":
+  "integrity" "sha1-muXtx8LUJXCTS+TJXRzMY1LrpS0="
+  "resolved" "http://registry.m.jd.com/source-map-loader/download/source-map-loader-3.0.1.tgz"
+  "version" "3.0.1"
+  dependencies:
+    "abab" "^2.0.5"
+    "iconv-lite" "^0.6.3"
+    "source-map-js" "^1.0.1"
 
 "source-map-resolve@^0.5.0", "source-map-resolve@^0.5.2":
   "integrity" "sha1-GQhmvs51U+H48mei7oLGBrVQmho="
@@ -10243,6 +10271,16 @@
   dependencies:
     "glob" "^7.1.2"
 
+"ts-loader@^9.2.8":
+  "integrity" "sha1-6JqjL6gpxcrQodAj1rOt7NUdWkg="
+  "resolved" "http://registry.m.jd.com/ts-loader/download/ts-loader-9.2.8.tgz"
+  "version" "9.2.8"
+  dependencies:
+    "chalk" "^4.1.0"
+    "enhanced-resolve" "^5.0.0"
+    "micromatch" "^4.0.0"
+    "semver" "^7.3.4"
+
 "ts-node@^9":
   "integrity" "sha1-UamkUKPpWUAb2l8ASnLVS5NtN20="
   "resolved" "http://registry.m.jd.com/ts-node/download/ts-node-9.1.1.tgz"
@@ -10324,7 +10362,7 @@
   dependencies:
     "typescript-compare" "^0.0.2"
 
-"typescript@^4.4.3", "typescript@>=2.7":
+"typescript@*", "typescript@^4.4.3", "typescript@^4.6.2", "typescript@>=2.7":
   "integrity" "sha1-/hLScntwj07vQPUVmLM5i6qWEdQ="
   "resolved" "http://registry.m.jd.com/typescript/download/typescript-4.6.2.tgz"
   "version" "4.6.2"

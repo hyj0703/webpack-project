@@ -9,6 +9,7 @@ import CommonErrHandler from '../CommonErrHandler/CommonErrHandler'
 import Demo from '../Demo/Demo' //TODO 演示用，可删除
 import KeySharePanel from '../KeySharePanel/KeySharePanel'
 import Initing from '../Initing/Initing'
+import PkMain from '../PkMain/PkMain'
 import './App.scss'
 import historyOpts from './historyOpts'
 
@@ -27,6 +28,7 @@ export default function App() {
           <Initing />
           {/* TODO 演示用，可删除 */}
           <Demo />
+          <PkMain />
 
           {/* 其他的路由可以放在这里 */}
 

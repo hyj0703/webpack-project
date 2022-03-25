@@ -1,0 +1,85 @@
+{
+  "code": 0,
+  "data": {
+    "bizCode": 0,
+    "bizMsg": "success",
+    "result": {
+      "autoProduceInfo": {
+        "produceScore": "39540",
+        "teamProduceScore": "124176"
+      },
+      "divideInfo": {
+        "remainTime": "7234",
+        "status": 2
+      },
+      "groupInfo": {
+        "groupJoinInviteId": "m2telgJiWUMu6wr9cezUUMiFWw8AQcdzIE4-Nx8kn3ifU68hRdF3pc1b3e-r0w",
+        "groupLoginInviteId": "nWtQkRBiT00Vgl-mKO-BX_C36cV8R3MOnl7arzJsK99RwA0wmTD29IlvmJHYjZw",
+        "groupName": "i****g的队伍",
+        "groupNum": 5,
+        "memberList": [
+          {
+            "leader": 1,
+            "myself": 1,
+            "userImage": "https://storage.360buyimg.com/i.imageUpload/6a645f3663386162373835396237303731353739333439343039363333_sma.jpg",
+            "userNickName": "i****…"
+          },
+          {
+            "leader": 0,
+            "myself": 0,
+            "userImage": "https://m.360buyimg.com/babel/jfs/t1/84465/25/12851/6227/5d9ef445E9616cc68/58f81a6a65f4c5f2.png",
+            "userNickName": "京**户…"
+          },
+          {
+            "leader": 0,
+            "myself": 0,
+            "userImage": "https://m.360buyimg.com/babel/jfs/t1/84465/25/12851/6227/5d9ef445E9616cc68/58f81a6a65f4c5f2.png",
+            "userNickName": "京**户…"
+          },
+          {
+            "leader": 0,
+            "myself": 0,
+            "userImage": "https://m.360buyimg.com/babel/jfs/t1/84465/25/12851/6227/5d9ef445E9616cc68/58f81a6a65f4c5f2.png",
+            "userNickName": "京**户…"
+          },
+          {
+            "leader": 0,
+            "myself": 0,
+            "userImage": "https://m.360buyimg.com/babel/jfs/t1/84465/25/12851/6227/5d9ef445E9616cc68/58f81a6a65f4c5f2.png",
+            "userNickName": "京**户…"
+          }
+        ]
+      },
+      "groupPkInfo": {
+        "lastDay": 0,
+        "period": 3,
+        "remainTime": 10501313
+      },
+      "jdCipher": 0,
+      "mainBtnStatus": 5,
+      "nowTime": 1641560697687,
+      "secretp": "m2Bozh0mUkVG5Vz8crnTXxyVnSU",
+      "shareMiniprogramSwitch": 0,
+      "userImg": "https://storage.360buyimg.com/i.imageUpload/6a645f3663386162373835396237303731353739333439343039363333_big.jpg",
+      "userMasterGuestMode": 1,
+      "votInfo": {
+        "groupNumA": "12",
+        "groupNumB": "30",
+        "groupPercentA": "28.6",
+        "groupPercentB": "71.4",
+        "optionA": "//m.360buyimg.com/mobileActivity/jfs/t1/220667/2/10042/31833/61d3ea4fE66bc071e/d080b5aa2f965ec7.png",
+        "optionAText": "轻食餐",
+        "optionB": "//m.360buyimg.com/mobileActivity/jfs/t1/104872/29/21255/29666/61d3ea57Ecc7784ff/a7a07e7e78dd9cd7.png",
+        "optionBText": "营养补充剂",
+        "packageA": "7000",
+        "packageB": "7000",
+        "question": "大鱼大肉之后，为减轻负罪感我会吃：",
+        "status": 5,
+        "votFor": "A"
+      },
+      "votNum": 5
+    },
+    "success": true
+  },
+  "msg": "调用成功"
+}
